@@ -1,11 +1,18 @@
 body {
     background-image: url(background.jpg);
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat; /* 禁止圖片重複 */
+    background-attachment: fixed; /* 背景圖片固定在螢幕正中間 */
     background-position: center;
     font-family: Arial, sans-serif;
     color: #fff;
     text-align: center;
     padding: 20px;
+    
+}
+bg{
+    
 }
 
 h1 {
