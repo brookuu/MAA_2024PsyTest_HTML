@@ -2,7 +2,7 @@
 function AddValue(valueType,value,pageName) {
     
     sessionStorage.setItem(valueType, (parseInt(sessionStorage.getItem(valueType)) || 0) + parseInt(value));
-    alert(valueType+parseInt(sessionStorage.getItem(valueType)));
+    // alert(valueType+parseInt(sessionStorage.getItem(valueType)));
     
 
     var pageURL = pageName + ".html";
