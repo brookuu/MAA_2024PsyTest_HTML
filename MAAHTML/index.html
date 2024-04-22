@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>心理測驗</title>
+    <title>多原宇宙心理測驗</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="preload.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('click', function() {
+                window.location.href = 'anim1.html';//點擊任意地方後跳轉頁面
+            });
+        });
+        preloadImages();
+    </script>
 </head>
 <body>
-    <h1>心理測驗</h1>
-    <div class="question">
-        <p>問題 1: 我喜歡與人群交流。</p>
-        <input type="radio" name="question1" value="1"> 是
-        <input type="radio" name="question1" value="0"> 否
-    </div>
-    <div class="question">
-        <p>問題 2: 我喜歡獨自工作。</p>
-        <input type="radio" name="question2" value="1"> 是
-        <input type="radio" name="question2" value="0"> 否
-    </div>
-    <button id="submitBtn">提交</button>
-
+    <div class="slideshow-container">
+        <div class="slideshow-image"></div>        
+      </div>
     <script src="script.js"></script>
+    <div class="container">
+        <img src="image/Logo/logo1.png" alt="Your Image" class="image">
+        <div class="text">
+          <p>你在多媒宇宙中扮演什麼角色?</p>
+        </div>
+    </div>
 </body>
 </html>

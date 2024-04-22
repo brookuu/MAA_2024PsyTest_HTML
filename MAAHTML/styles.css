@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'NotoFont';
+    src: url('font/NotoSansCJKtc-Regular.otf');
+    font-display: swap;
+}
 body {
-    background-image: url(background.jpg);
+   
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; /* 禁止圖片重複 */
@@ -11,12 +16,12 @@ body {
     padding: 20px;
     
 }
-bg{
-    
-}
 
 h1 {
-    margin-top: 50px;
+    /* font-family: NotoFont, sans-serif; */
+    margin-top: 60px;
+    font-size: 35px;
+    margin-bottom: 50px;
 }
 
 .question {
@@ -28,15 +33,400 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
+.slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeSlide {
+    0% {
+        background-image: url('image/Cover/Background/op1.png');
+    }
+    20% {
+        background-image: url('image/Cover/Background/op2.png');
+    }
+    40% {
+        background-image: url('image/Cover/Background/op3.png');
+    }
+    60% {
+        background-image: url('image/Cover/Background/op4.png');
+    }
+    80% {
+        background-image: url('image/Cover/Background/op5.png');
+    }
+    100% {
+        background-image: url('image/Cover/Background/op1.png');
+    }
+  }
+  .slideshow-image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide2;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeSlide2 {
+    0% {
+        background-image: url('image/Illustration1/Background/allert_1.png');
+    }
+    20% {
+        background-image: url('image/Illustration1/Background/allert_2.png');
+    }
+    40% {
+        background-image: url('image/Illustration1/Background/allert_3.png');
+    }
+    60% {
+        background-image: url('image/Illustration1/Background/allert_4.png');
+    }
+    80% {
+        background-image: url('image/Illustration1/Background/allert_5.png');
+    }
+    100% {
+        background-image: url('image/Illustration1/Background/allert_1.png');
+    }
+  }
+  .slideshow-image2-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide2-2;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeSlide2-2 {
+    0% {
+        background-image: url('image/Illustration1/Base_map/ill_1.png');
+    }
+    20% {
+        background-image: url('image/Illustration1/Base_map/ill_2.png');
+    }
+    40% {
+        background-image: url('image/Illustration1/Base_map/ill_3.png');
+    }
+    60% {
+        background-image: url('image/Illustration1/Base_map/ill_4.png');
+    }
+    80% {
+        background-image: url('image/Illustration1/Base_map/ill_5.png');
+    }
+    100% {
+        background-image: url('image/Illustration1/Base_map/ill_1.png');
+    }
+  }
+  .slideshow-image3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide3;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeSlide3 {
+    0% {
+        background-image: url('image/Quiz/Background/Quiz1.png');
+    }
+    20% {
+        background-image: url('image/Quiz/Background/Quiz2.png');
+    }
+    40% {
+        background-image: url('image/Quiz/Background/Quiz3.png');
+    }
+    60% {
+        background-image: url('image/Quiz/Background/Quiz4.png');
+    }
+    80% {
+        background-image: url('image/Quiz/Background/Quiz5.png');
+    }
+    100% {
+        background-image: url('image/Quiz/Background/Quiz1.png');
+    }
+  }
+  .slideshow-image4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide4;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeSlide4 {
+    0% {
+        background-image: url('image/Illustration2/Background/bg1.png');
+    }
+    20% {
+        background-image: url('image/Illustration2/Background/bg2.png');
+    }
+    40% {
+        background-image: url('image/Illustration2/Background/bg3.png');
+    }
+    60% {
+        background-image: url('image/Illustration2/Background/bg4.png');
+    }
+    80% {
+        background-image: url('image/Illustration2/Background/bg5.png');
+    }
+    100% {
+        background-image: url('image/Illustration2/Background/bg1.png');
+    }
+  }
+  .slideshow-image4-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide4-2;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+  }
+  
+  @keyframes changeSlide4-2 {
+    0% {
+        background-image: url('image/Illustration2/Negative_film/film1.png');
+    }
+    20% {
+        background-image: url('image/Illustration2/Negative_film/film2.png');
+    }
+    40% {
+        background-image: url('image/Illustration2/Negative_film/film3.png');
+    }
+    60% {
+        background-image: url('image/Illustration2/Negative_film/film4.png');
+    }
+    80% {
+        background-image: url('image/Illustration2/Negative_film/film5.png');
+    }
+    100% {
+        background-image: url('image/Illustration2/Negative_film/film5.png');
+    }
+  }
+  .slideshow-image4-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide4-3;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes changeSlide4-3 {
+    0% {
+        background-image: url('image/Illustration2/Picture/pic1.png');
+    }
+    20% {
+        background-image: url('image/Illustration2/Picture/pic2.png');
+    }
+    40% {
+        background-image: url('image/Illustration2/Picture/pic3.png');
+    }
+    60% {
+        background-image: url('image/Illustration2/Picture/pic4.png');
+    }
+    80% {
+        background-image: url('image/Illustration2/Picture/pic5.png');
+    }
+    100% {
+        background-image: url('image/Illustration2/Picture/pic6.png');
+    }
+  }
+  .slideshow-image5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide5;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeSlide5 {
+    0% {
+        background-image: url('image/Quiz_results1/Background/Quiz_r_bg_1.png');
+    }
+    20% {
+        background-image: url('image/Quiz_results1/Background/Quiz_r_bg_2.png');
+    }
+    40% {
+        background-image: url('image/Quiz_results1/Background/Quiz_r_bg_3.png');
+    }
+    60% {
+        background-image: url('image/Quiz_results1/Background/Quiz_r_bg_4.png');
+    }
+    80% {
+        background-image: url('image/Quiz_results1/Background/Quiz_r_bg_5.png');
+    }
+    100% {
+        background-image: url('image/Quiz_results1/Background/Quiz_r_bg_1.png');
+    }
+  }
+  .slideshow-image5-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide5-2;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes changeSlide5-2 {
+    0% {
+        background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_1.png');
+    }
+    20% {
+        background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_2.png');
+    }
+    40% {
+        background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_3.png');
+    }
+    60% {
+        background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_4.png');
+    }
+    80% {
+        background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_5.png');
+    }
+    100% {
+        background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_1.png');
+    }
+  }
+  .slideshow-image6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation-name: changeSlide6;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeSlide6 {
+    0% {
+        background-image: url('image/Quiz_results2/Background/Quiz_results1.png');
+    }
+    20% {
+        background-image: url('image/Quiz_results2/Background/Quiz_results2.png');
+    }
+    40% {
+        background-image: url('image/Quiz_results2/Background/Quiz_results3.png');
+    }
+    60% {
+        background-image: url('image/Quiz_results2/Background/Quiz_results4.png');
+    }
+    80% {
+        background-image: url('image/Quiz_results2/Background/Quiz_results5.png');
+    }
+    100% {
+        background-image: url('image/Quiz_results2/Background/Quiz_results1.png');
+    }
+  }
+  
+  .container {
+    text-align: center; /* 文字居中对齐 */
+  }
+  .image {
+    margin-top: 20%;
+    width: 80%; /* 图片宽度占满容器 */
+  }
+  .text {
+    margin-top: 20px; /* 文字与图片之间的上边距 */
+    font-size: 18px; /* 文字大小 */
+    color: #ffffff; /* 文字颜色 */
+    /* font-family: NotoFont, sans-serif; */
+  }
+
+  button {
+    background-color:#2ed2ff85;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;/*文本與邊框距離*/
+    margin: 20px auto;
+    max-width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    /* font-family: NotoFont, sans-serif; */
+}
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff2ee785;
+}
+.button2 {
+    background-color: #622eff85;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;/*文本與邊框距離*/
+    margin: 20px auto;
+    max-width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    /* font-family: NotoFont, sans-serif; */
+}
+.button2:hover {
+    background-color: #ff2ee785;
+}
+.pre-wrap {
+    white-space: pre-wrap; /* 保留空白符，但允许文本换行 */
+}
+.final1-container {
+    margin-top: 100px;
+    padding-top: 20px;
 }

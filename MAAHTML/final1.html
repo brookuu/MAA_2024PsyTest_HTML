@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多原宇宙心理測驗</title>
+    <link rel="stylesheet" href="styles.css">
+    <style id="animation-style">
+        /* 初始动画样式 */
+        @keyframes changeSlide5-2 {
+            0% {
+                background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_1.png');
+            }
+            20% {
+                background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_2.png');
+            }
+            40% {
+                background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_3.png');
+            }
+            60% {
+                background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_4.png');
+            }
+            80% {
+                background-image: url('image/Quiz_results1/Base_map/Quiz_r_bg_5.png');
+            }
+            /* 此处为动态生成的路径 */
+            100% {
+                background-image: url('');
+            }
+        }
+    </style>
+    <script src="preload.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('click', function() {
+                window.location.href = 'final2.html';//點擊任意地方後跳轉頁面
+            });
+        });
+        preloadImages5();
+    </script>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slideshow-image5"></div>  
+        <div class="slideshow-image5-2"  style="scale:0.8;"></div>      
+      </div>
+    
+    <!-- <div class="fianl1-container">
+        <h1><span id="type" style="font-size: 70px;"></span></h1>
+        <h2><span id="type2"></span></h2>
+        <p class="pre-wrap"><span id="explain"></span></p>
+    </div> -->
+    
+    <script>
+        let empathy=0;
+        let strength=0;
+        let curiosity=0;
+        let sanity=0;
+        let cautious=0;
+        sessionStorage.setItem('end_type',0);
+        let use_type=0;
+
+        empathy= parseInt(sessionStorage.getItem("empathy")) || 0;
+        strength= parseInt(sessionStorage.getItem("strength") )|| 0;
+        curiosity= parseInt(sessionStorage.getItem("curiosity")) || 0;
+        sanity= parseInt(sessionStorage.getItem("sanity")) || 0;
+        cautious= parseInt(sessionStorage.getItem("cautious")) || 0;
+        if(empathy==3){
+            sessionStorage.setItem('end_type',3);
+        }else if(strength==4){
+            sessionStorage.setItem('end_type',1);
+        }else if(curiosity>=6){
+            sessionStorage.setItem('end_type',4);
+        }else if(curiosity>=4&&strength>=2){
+            sessionStorage.setItem('end_type',2);
+        }else{
+            sessionStorage.setItem('end_type',0);
+        }
+        use_type=sessionStorage.getItem('end_type');
+        // if(use_type==0){
+        //     document.getElementById("type").innerText = '商人';
+        // }else if(use_type==1){
+        //     document.getElementById("type").innerText = '魔王';
+        // }else if(use_type==2){
+        //     document.getElementById("type").innerText = '神';
+        // }else if(use_type==3){
+        //     document.getElementById("type").innerText = '祭司';
+        // }else if(use_type==4){
+        //     document.getElementById("type").innerText = '勇者';
+        // }
+        // if(use_type==0){
+        //     document.getElementById("type2").innerText = '「先吃飽再說」';
+        // }else if(use_type==1){
+        //     document.getElementById("type2").innerText = '「為了自我利益，踏平一切阻礙」';
+        // }else if(use_type==2){
+        //     document.getElementById("type2").innerText = '「我，不屬於這裡」';
+        // }else if(use_type==3){
+        //     document.getElementById("type2").innerText = '「對他人的苦痛，感同身受」';
+        // }else if(use_type==4){
+        //     document.getElementById("type2").innerText = '「將不畏困難向前邁進」';
+        // }
+        // if(use_type==0){
+        //     document.getElementById("explain").innerText = '你將是這段旅程不引人注目的個體，比起宏大的志向，傾向於以平和、務實的方式生活。不太會主動插手別人的事情，能專注做好手邊的事情，可能在沒人注意到的時候累積一筆驚人的財富。';
+        // }else if(use_type==1){
+        //     document.getElementById("explain").innerText = '「為了自我利益，踏平一切阻礙」';
+        // }else if(use_type==2){
+        //     document.getElementById("explain").innerText = '「我，不屬於這裡」';
+        // }else if(use_type==3){
+        //     document.getElementById("explain").innerText = '「對他人的苦痛，感同身受」';
+        // }else if(use_type==4){
+        //     document.getElementById("explain").innerText = '「將不畏困難向前邁進」';
+        // }
+
+
+            // 根据 HTML 中的值动态生成动画最后一张图片路径
+            let lastImage = 'image/Quiz_results1/All/' + use_type + '.png';
+
+            // 获取动画样式表
+            let styleSheet = document.getElementById('animation-style').sheet;
+
+            // 获取最后一帧的样式规则
+            let keyframesRule = styleSheet.cssRules[0];
+
+            // 修改最后一帧的 background-image
+            keyframesRule.deleteRule('100%');
+            keyframesRule.appendRule('100% { background-image: url("' + lastImage + '"); }');
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
